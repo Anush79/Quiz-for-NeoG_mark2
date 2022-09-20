@@ -1,5 +1,3 @@
-
-
 var readline = require("readline-sync");
 var name = readline.question("Hello ! what is your name?   ");
 console.log("Welcome " +name)
@@ -126,15 +124,15 @@ for(var i = 0; i < Questions.length; i++){
   
   quiz(Questions[i].question,Questions[i].answer,Questions[i].options)
   if(score==25 ){
-    console.log("Wow! You are Good at this!\n");
+    console.log("Wow! You are Good at this! Level 1 completed.\n");
   }
   else if (score==50){
-    console.log("Excellent! You are quite a player !!\n");
+    console.log("Excellent! You are quite a player!! Level 2 completed\n");
     
   }
   else if(score==65)
   {
-    console.log("Fantastic , I am Sure You are an Overachiever :)\n")
+    console.log("Fantastic , I am Sure You are an Overachiever :) Level 3 Completed\n")
   }
 }
 
@@ -154,7 +152,7 @@ var scoreboard = [
   score:69
 },
   {
-    name:"Krituraj",
+    name:"Rituraj",
     score:57
   },
 {
@@ -169,6 +167,8 @@ if(score >= 69){
   console.log("      "+name+ " : "+ score);
 }
   scoreboard.map(score => console.log("     ",score.name, " : ", score.score))
+
+
 
 
 
