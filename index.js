@@ -1,30 +1,32 @@
+var chalk = require("chalk");
 var readline = require("readline-sync");
-var name = readline.question("Hello ! what is your name?   ");
-console.log("Welcome " +name)
-console.log("Do you know India? Let's find out.\n This quiz will give you 5 Points for each correct answer and -1 for each wrong answer.\nJust type correct option number. All the best.\n")
 
+var name = readline.question(chalk.blue("Hello ! what is your name?   "));
+console.log(chalk.bgBlue.italic.bold("\n Welcome " +name+"..."))
+console.log("\nDo you know India? Let's find out.\n This quiz will give you 5 Points for each correct answer and -1 for each wrong answer.\n");
+console.log(chalk.underline("\nJust type correct option number and hit Enter. All the best.\n"));
 
 var score = 0;
 var correct = 0;
 
 function quiz(ques , ans, opt)
   {
-    console.log(ques);var points = 1;
+    console.log(chalk.magenta(ques));var points = 1;
     for (var i=0;i<opt.length; i++)
       {
-        console.log(points+". "+opt[i]);
+        console.log(chalk.yellow(points+". "+opt[i]));
        points++;
       }
-    var userAns = readline.question("\nAnswer:  ");
+    var userAns = readline.question("\n  Answer:  ");
     if(userAns === ans)
     { 
       score = score + 5;
-      console.log("Correct Answer ! Your score is " + score +"\n");
+      console.log(chalk.bgGreen("  Correct Answer ! Your score is " + score +"  \n"));
       correct++;
     }
     else{
       score--;
-      console.log("Wrong Answer! score is " +score +"\n");
+      console.log(chalk.bgRed("  Wrong Answer! score is " +score +"  \n"));
     
     }
     
@@ -167,6 +169,7 @@ if(score >= 69){
   console.log("      "+name+ " : "+ score);
 }
   scoreboard.map(score => console.log("     ",score.name, " : ", score.score))
+
 
 
 
