@@ -1,10 +1,12 @@
 # Quiz-for-NeoG_mark2
 It is just a simple quiz CLI app made for kids about India. Play this MCQ based Quiz if You want to test your primary GK knowledge.
 
-###You will get one 5 points for correct answer and -1 point for each wrong answer. Have fun playing this with your friends.
+#### You will get one 5 points for correct answer and -1 point for each wrong answer. Have fun playing this with your friends.
 
 After each question , right or wrong, marks will be calculated and shown to you. At the end of the game Highscores will be printed.
-
+#### Tech stack
+  - Vanilla JS
+  
 I have used **chalk Library** for Cli styling to make it look good. Hope you like it.
 Here is the screenshot.
 
